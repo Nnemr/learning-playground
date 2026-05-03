@@ -25,5 +25,4 @@ class LongPollingController {
     public String poll(@PathVariable("uuid") UUID uuid) {
         return longPollingService.getStatus(uuid);
     }
-
 }
