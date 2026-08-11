@@ -1,12 +1,14 @@
 package com.yanemr.services;
 
 import com.yanemr.dao.IntegrationEventDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class BasicService {
 
-    private IntegrationEventDAO integrationEventDAO;
+    @Autowired
+    private final IntegrationEventDAO integrationEventDAO;
 
     public BasicService() {
         this(new IntegrationEventDAO());
@@ -14,10 +16,6 @@ public class BasicService {
 
     public BasicService(IntegrationEventDAO integrationEventDAO) {
         this.integrationEventDAO = integrationEventDAO;
-    }
-
-    public void sendEvent(int reading) {
-        integrationEventDAO
     }
 
 }

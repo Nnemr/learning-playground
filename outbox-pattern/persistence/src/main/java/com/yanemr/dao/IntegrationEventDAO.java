@@ -2,6 +2,7 @@ package com.yanemr.dao;
 
 import com.yanemr.repositories.JpaIntegrationEventRepository;
 import com.yanemr.tables.IntegrationEventTable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository

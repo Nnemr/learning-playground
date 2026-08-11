@@ -1,7 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.yanemr</groupId>
+
+  <!-- Link to parent - inherits groupId and version -->
+  <parent>
+    <groupId>com.yanemr</groupId>
+    <artifactId>outbox-pattern</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <!-- Only artifactId needed - groupId and version come from parent -->
   <artifactId>flyway</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
@@ -20,11 +31,6 @@
       <version>13.2.0</version>
       <scope>compile</scope>
     </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-beans</artifactId>
-      <version>6.1.1</version>
-      <scope>compile</scope>
-    </dependency>
   </dependencies>
+
 </project>
