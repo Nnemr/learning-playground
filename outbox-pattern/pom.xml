@@ -23,6 +23,9 @@
         <java.version>17</java.version>
         <spring-boot.version>3.2.0</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <database.user>${database.user}</database.user>
+        <database.password>${database.user}</database.password>
+        <database.schema></database.schema>
     </properties>
 
     <!-- dependencyManagement controls versions without forcing inclusion -->
