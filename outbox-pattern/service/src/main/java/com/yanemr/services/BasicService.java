@@ -10,10 +10,6 @@ public class BasicService {
     @Autowired
     private final IntegrationEventDAO integrationEventDAO;
 
-    public BasicService() {
-        this(new IntegrationEventDAO());
-    }
-
     public BasicService(IntegrationEventDAO integrationEventDAO) {
         this.integrationEventDAO = integrationEventDAO;
     }

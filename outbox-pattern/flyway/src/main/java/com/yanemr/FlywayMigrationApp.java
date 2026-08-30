@@ -4,9 +4,13 @@ import org.flywaydb.core.Flyway;
 
 public class FlywayMigrationApp
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-        Flyway flyway = Flyway.configure().load();
+        Flyway flyway = Flyway.configure()
+                .envVars()
+                .baselineOnMigrate(true)
+                .load();
+
         flyway.migrate();
     }
 }

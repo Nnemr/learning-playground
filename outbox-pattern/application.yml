@@ -1,5 +1,12 @@
 spring:
   datasource:
+    user: ${DB_USER}
+    password: ${POSTGRES_PASSWORD}
     url: ${SPRING_DATASOURCE_URL}
   application:
     name: outbox-pattern
+
+flyway:
+  user: ${spring.datasource.user}
+  password: ${spring.datasource.password}
+  url: ${spring.datasource.url}
