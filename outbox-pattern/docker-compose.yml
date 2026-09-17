@@ -2,7 +2,7 @@ services:
   flyway:
     image: outbox-migrations:latest
     environment:
-      FLYWAY_URL: jdbc:postgresql://outbox-pattern-outbox-db-1/outbox_service
+      FLYWAY_URL: jdbc:postgresql://outbox-pattern-outbox-db-1/${DB_NAME}
       FLYWAY_USER: ${DB_USER}
       FLYWAY_PASSWORD: ${DB_PASSWORD}
     networks:
